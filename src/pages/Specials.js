@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import products1 from '../data/PopularJerseys'
+import products2 from '../data/SpecialJerseys'
 
-function ProductPage() {
+function Specials() {
     return (
         <>
 
@@ -17,7 +17,7 @@ function ProductPage() {
                 <div className="row">
 
                     {
-                        products1.map((productData) => (
+                        products2.map((productData) => (
                             <div className="col-md-4 mt-4">
                         <div className="card" style={{height:"600px"}}>
                             <div className="card-body" style={{height:"400px"}}>
@@ -54,4 +54,4 @@ function ProductPage() {
 
 }
 
-export default ProductPage
+export default Specials

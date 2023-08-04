@@ -1,13 +1,8 @@
 import React from 'react'
-// import blog1 from '../img/blog-1.jpg'
-// import blog2 from '../img/blog-2.jpg'
-// import blog3 from '../img/blog-3.jpg'
 import j1 from '../img/j1.webp'
 import j2 from '../img/j2.jpg'
 import j3 from '../img/j3.avif'
-import whatsappIcon from '../img/whatsapp-icon.png'
-// import brands from '../img/brands.png'
-// import mockup from '../img/mockup.png'
+
 
 
 function Homepage() {
@@ -150,7 +145,7 @@ function Homepage() {
                 <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "400px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Azilfa Specials</h3>
                     <img alt='j3' src={j3} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
-                    <a href="/" className="btn btn-info" style={{margin:"10px"}}>
+                    <a href="/specials" className="btn btn-info" style={{margin:"10px"}}>
                         Buy now
                     </a>
                 </div>
@@ -200,12 +195,6 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className="row mt-4">
-                        <div className="col-md-6 mx-auto text-center">
-                            <h5 className="mb-4">Have questions?</h5>
-                            <a href="/" className="btn btn-primary">Contact us</a>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -221,7 +210,7 @@ function Homepage() {
                     
                     <div className="row mt-6">
                         <div className="col-md-6 mx-auto text-center">
-                            <a href="/" className="btn btn-primary"><img alt="whatsApp" src={whatsappIcon} style={{height:'25px', width:'25px', margin:'7px'}}/>Go to WhatsApp</a>
+                            <a href="/" className="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
                 </div>

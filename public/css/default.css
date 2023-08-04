@@ -29,7 +29,6 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-
 .price-box{
   display: flex;
   flex-direction: row;
