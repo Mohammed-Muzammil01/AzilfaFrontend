@@ -138,7 +138,7 @@ function Homepage() {
                 <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px", minHeight: "400px"}}>
                     <h3 className="card-title text-primary mb-0 pt-4">Popular Jerseys</h3>
                     <img alt='j1' src={j1} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
-                    <Link href="/categories" className="btn btn-info" style={{margin:"10px"}}>
+                    <Link to="/categories" className="btn btn-info" style={{margin:"10px"}}>
                         Buy now
                     </Link>
                 </div>
@@ -152,7 +152,7 @@ function Homepage() {
                 <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Customisable Jerseys</h3>
                     <img alt='j2' src={j2} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
-                    <Link href="customise" className="btn btn-info" style={{margin:"10px"}}>
+                    <Link href="/customise" className="btn btn-info" style={{margin:"10px"}}>
                         Buy now
                     </Link>
                 </div>
