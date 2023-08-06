@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -25,16 +26,16 @@ function Footer() {
                         <div className="col-sm-2">
                             <h5>Legal</h5>
                             <ul className="list-unstyled">
-                                <li><a href="/privacy">Privacy</a></li>
-                                <li><a href="/T&C">Terms</a></li>
-                                <li><a href="/T&C">Refund policy</a></li>
+                                <li><Link to="/privacy">Privacy</Link></li>
+                                <li><Link to="/T&C">Terms</Link></li>
+                                <li><Link to="/T&C">Refund policy</Link></li>
                             </ul>
                         </div>
 
                         <div className="col-sm-2">
                             <h5>Help</h5>
                             <ul className="list-unstyled">
-                                <li><a href="/">Support</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=8179010503">Support</a></li>
                             </ul>
                         </div>
                     </div>

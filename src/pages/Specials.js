@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import products2 from '../data/SpecialJerseys'
 import { Server } from '../S-link'
+import { Link } from 'react-router-dom'
 
 function Specials() {
     return (
@@ -32,15 +33,15 @@ function Specials() {
                             <div className="card-body bg-light text-center d-flex flex-column" style={{height:"200px"}}>
                                 <div className="mb-2">
                                     <h3 className="font-weight-semibold mb-2">
-                                        <a href={`/jersey/${productData.id}`} className="text-default mb-2" data-abc="true">{productData.name}</a>
+                                        <Link to={`/jersey/${productData.id}`} className="text-default mb-2" data-abc="true">{productData.name}</Link>
                                     </h3>
 
-                                    {/* <a href="/" className="text-muted" data-abc="true">Laptops & Notebooks</a> */}
+                                    {/* <Link to="/" className="text-muted" data-abc="true">Laptops & Notebooks</Link> */}
                                 </div>
 
                                 <h5 className="mb-0 font-weight-semibold" style={{ color: "#000" }}>&#8377;799.00</h5>
 
-                                <a href={`/jersey/${productData.id}`} type="button" className="btn bg-dark mt-2"><i className="fa fa-cart-plus mr-2"></i>Buy</a>
+                                <Link to={`/jersey/${productData.id}`} type="button" className="btn bg-dark mt-2"><i className="fa fa-cart-plus mr-2"></i>Buy</Link>
 
                             </div>
                         </div>

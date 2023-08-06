@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import extraProducts from '../../data/Extras'
 import { Server } from '../../S-link'
+import { Link } from 'react-router-dom'
 
 function SpecialJerseys() {
   return (
@@ -33,15 +34,14 @@ function SpecialJerseys() {
                     <div className="card-body bg-light text-center d-flex flex-column" style={{height:"200px"}}>
                         <div className="mb-2">
                             <h3 className="font-weight-semibold mb-2">
-                                <a href={`/jersey/${productData.id}`} className="text-default mb-2" data-abc="true">{productData.name}</a>
+                                <Link to={`/jersey/${productData.id}`} className="text-default mb-2" data-abc="true">{productData.name}</Link>
                             </h3>
 
-                            {/* <a href="/" className="text-muted" data-abc="true">Laptops & Notebooks</a> */}
                         </div>
 
                         <h5 className="mb-0 font-weight-semibold" style={{ color: "#000" }}>&#8377;799.00</h5>
 
-                        <a href={`/jersey/${productData.id}`} type="button" className="btn bg-dark mt-2"><i className="fa fa-cart-plus mr-2"></i>Buy</a>
+                        <Link to={`/jersey/${productData.id}`} type="button" className="btn bg-dark mt-2"><i className="fa fa-cart-plus mr-2"></i>Buy</Link>
 
                     </div>
                 </div>

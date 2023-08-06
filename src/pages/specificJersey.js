@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import SimpleCarousel from '../components/Carousel';
 import products1 from '../data/allJerseys';
 import PayButton from '../components/PayButton';
@@ -18,7 +18,7 @@ function SpecificJersey() {
     const [fullSleeves, setFullSleeves] = useState(false);
     const [shorts, setShorts] = useState(false);
     const [address, setAddress] = useState('');
-    const [price, setPrice] = useState(799);
+    const [price, setPrice] = useState(899);
     const [totalPrice, setTotalPrice] = useState();
     const [imgs, setImgs] = useState();
 
@@ -119,7 +119,7 @@ useEffect(() => {
                     <p className="mb-4">{jersey.description}</p>
                     <div className="mb-3" >
                         <div>
-                            <label htmlFor="size" className="text-light">Choose size: <a href="/sizechart" target="_blank" className="medium">Refer Size Chart</a></label>
+                            <label htmlFor="size" className="text-light">Choose size: <Link to="/sizechart" target="_blank" className="medium">Refer Size Chart</Link></label>
                             <select value={size} required id="cars" style={{ width: "200px" }} className="form-control bg-light text-dark" onChange={e => setSize(e.target.value)}>
                                 <option value="XS">XS</option>
                                 <option value="S">S</option>

@@ -145,14 +145,14 @@ function Homepage() {
                 <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Azilfa Specials</h3>
                     <img alt='j3' src={j3} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
-                    <a href="/specials" className="btn btn-info" style={{margin:"10px"}}>
+                    <Link to="/specials" className="btn btn-info" style={{margin:"10px"}}>
                         Buy now
-                    </a>
+                    </Link>
                 </div>
                 <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Customisable Jerseys</h3>
                     <img alt='j2' src={j2} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
-                    <Link href="/customise" className="btn btn-info" style={{margin:"10px"}}>
+                    <Link to="/customise" className="btn btn-info" style={{margin:"10px"}}>
                         Buy now
                     </Link>
                 </div>
@@ -210,7 +210,7 @@ function Homepage() {
                     
                     <div className="row mt-6">
                         <div className="col-md-6 mx-auto text-center">
-                            <a href="/" className="btn btn-primary">Contact Us</a>
+                            <a href="https://api.whatsapp.com/send?phone=8179010503" className="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -231,7 +231,7 @@ function Homepage() {
                                     <a href="/"><i className="fa fa-twitter"></i></a>
                                 </li>
                                 <li className="list-inline-item">
-                                    <a href="/"><i className="fa fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/azilfainc/"><i className="fa fa-instagram"></i></a>
                                 </li>
                                 
                             </ul>
@@ -239,16 +239,16 @@ function Homepage() {
                         <div className="col-sm-2">
                             <h5>Legal</h5>
                             <ul className="list-unstyled">
-                                <li><a href="/privacy">Privacy</a></li>
-                                <li><a href="/T&C">Terms</a></li>
-                                <li><a href="/T&C">Refund policy</a></li>
+                                <li><Link to="/privacy">Privacy</Link></li>
+                                <li><Link to="/T&C">Terms</Link></li>
+                                <li><Link to="/T&C">Refund policy</Link></li>
                             </ul>
                         </div>
 
                         <div className="col-sm-2">
                             <h5>Help</h5>
                             <ul className="list-unstyled">
-                                <li><a href="/">Support</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=8179010503">Support</a></li>
                             </ul>
                         </div>
                     </div>

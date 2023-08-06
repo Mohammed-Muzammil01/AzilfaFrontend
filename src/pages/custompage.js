@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import PayButton from '../components/PayButton';
+import { Link } from 'react-router-dom';
 
 
 function CustomPage() {
@@ -106,7 +107,7 @@ function CustomPage() {
                                 <input onChange={addImgs} required type="file" className="form-control" multiple accept='.jpg, .jpeg, .png, .webp, .svg' />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="size" className="text-light">Choose size: <a href="/sizechart" target="_blank" className="medium">Refer Size Chart</a></label>
+                                <label htmlFor="size" className="text-light">Choose size: <Link to="/sizechart" target="_blank" className="medium">Refer Size Chart</Link></label>
                                 <select required id="size" name="size" className="form-control bg-light text-dark" onChange={e => setSize(e.target.value)}>
                                     <option value="XS">XS</option>
                                     <option value="S">S</option>
@@ -172,7 +173,7 @@ function CustomPage() {
                         </form>
                         <div className="mb-3" style={{ marginTop: "10px" }}>
                             <p className="text-muted">
-                                Have queries? <a href="/" className="medium">Contact Us</a>
+                                Have queries? <a href="https://api.whatsapp.com/send?phone=8179010503" className="medium">Contact Us</a>
                             </p>
                         </div>
                     </div>
