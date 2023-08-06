@@ -49,7 +49,8 @@ function SpecificJersey() {
         fullSleeves,
         shorts,
         promo,
-        totalPrice
+        totalPrice,
+        extraImgs: imgs
     }
 
 
