@@ -1,7 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Homepage from './pages/homepage';
-import ProductPage from './pages/productpage';
 import CustomPage from './pages/custompage';
 import SpecificJersey from './pages/specificJersey';
 import CheckoutSuccess from './pages/CheckoutSuccess';

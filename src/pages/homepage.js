@@ -2,7 +2,7 @@ import React from 'react'
 import j1 from '../img/j1.webp'
 import j2 from '../img/j2.jpg'
 import j3 from '../img/j3.avif'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 
 function Homepage() {

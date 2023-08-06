@@ -26,15 +26,8 @@ function PayButton(cart) {
         data.append('imgs', cart.cart.imgs[i]);
       }
 
-    // if (!cart.cart.prodId) {
-    //   for (let i = 0; i < cart.cart.imgs.length; i++) {
-    //     data.append('imgs', cart.cart.imgs[i]);
-    //   }
-    // } else {
-    //   data.append('imgs', cart.cart.prodId);
-    // }
     try {
-      const response = await axios.post('https://azilfabackend.onrender.com/api/customOrder', data, {
+      await axios.post('https://azilfabackend.onrender.com/api/customOrder', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
