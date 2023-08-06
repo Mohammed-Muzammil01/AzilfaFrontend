@@ -1,0 +1,1 @@
+export const Server = 'https://azilfabackend.onrender.com';

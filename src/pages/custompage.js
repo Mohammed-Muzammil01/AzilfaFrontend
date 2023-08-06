@@ -15,7 +15,6 @@ function CustomPage() {
     const [address, setAddress] = useState('');
     const [promo, setPromo] = useState('nil');
     const [fullSleeves, setFullSleeves] = useState(false);
-    const [socks, setSocks] = useState(false);
     const [shorts, setShorts] = useState(false);
     const [price, setPrice] = useState(1000);
     const [totalPrice, setTotalPrice] = useState();
@@ -36,7 +35,6 @@ function CustomPage() {
         quantity,
         address,
         fullSleeves,
-        socks,
         shorts,
         promo,
         price,
@@ -64,31 +62,23 @@ function CustomPage() {
     const handleFullSleeves = () => {
         setFullSleeves((prevFullSleeves) => !prevFullSleeves);
         if (fullSleeves) {
-            setPrice(previousPrice => previousPrice - 50);
-        } else {
-            setPrice(previousPrice => previousPrice + 50);
-        }
-    }
-    const handleSocks = () => {
-        setSocks((prevSocks) => !prevSocks);
-        if (socks) {
             setPrice(previousPrice => previousPrice - 100);
         } else {
             setPrice(previousPrice => previousPrice + 100);
         }
     }
+    
     const handleShorts = () => {
         setShorts((prevShorts) => !prevShorts);
         if (shorts) {
-            setPrice(previousPrice => previousPrice - 100);
+            setPrice(previousPrice => previousPrice - 150);
         } else {
-            setPrice(previousPrice => previousPrice + 100);
+            setPrice(previousPrice => previousPrice + 150);
         }
     }
 
     useEffect(() => {
         setTotalPrice(quantity*price);
-        console.log(totalPrice);
     }, [quantity, price, totalPrice]);
 
     return (
@@ -116,7 +106,7 @@ function CustomPage() {
                                 <input onChange={addImgs} required type="file" className="form-control" multiple accept='.jpg, .jpeg, .png, .webp, .svg' />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="size" className="text-light">Choose size:</label>
+                                <label htmlFor="size" className="text-light">Choose size: <a href="/sizechart" target="_blank" className="medium">Refer Size Chart</a></label>
                                 <select required id="size" name="size" className="form-control bg-light text-dark" onChange={e => setSize(e.target.value)}>
                                     <option value="XS">XS</option>
                                     <option value="S">S</option>
@@ -130,19 +120,16 @@ function CustomPage() {
 
                                 <div style={{ margin: "5px" }} className="custom-control custom-checkbox custom-control-block">
                                     <input onChange={handleFullSleeves} type="checkbox" className="custom-control-input" id="inlineCheckbox1" />
-                                    <label className="custom-control-label" htmlFor="inlineCheckbox1">Full Sleeves (+ &#8377;50)</label>
+                                    <label className="custom-control-label" htmlFor="inlineCheckbox1">Full Sleeves (+ &#8377;100)</label>
                                 </div>
-                                <div style={{ margin: "5px" }} className="custom-control custom-checkbox custom-control-block">
-                                    <input onChange={handleSocks} type="checkbox" className="custom-control-input" id="inlineCheckbox2" />
-                                    <label className="custom-control-label" htmlFor="inlineCheckbox2">Socks (+ &#8377;100)</label>
-                                </div>
+                                
                                 <div style={{ margin: "5px" }} className="custom-control custom-checkbox custom-control-block">
                                     <input onChange={handleShorts} type="checkbox" className="custom-control-input" id="inlineCheckbox3" />
-                                    <label className="custom-control-label" htmlFor="inlineCheckbox3">Shorts (+ &#8377;100)</label>
+                                    <label className="custom-control-label" htmlFor="inlineCheckbox3">Shorts (+ &#8377;150)</label>
                                 </div>
                             </div>
 
-                            <div className="d-flex flex-column mb-1 pt-2">
+                            <div className="d-flex flex-column mb-3 pt-2">
                                 <label htmlFor="name">Quantity</label>
 
                                 <div className="input-group quantity" style={{ width: "200px" }}>

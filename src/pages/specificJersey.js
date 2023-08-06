@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import SimpleCarousel from '../components/Carousel';
-import products1 from '../data/PopularJerseys';
+import products1 from '../data/allJerseys';
 import PayButton from '../components/PayButton';
 import Navbar from '../components/Navbar';
-import products2 from '../data/SpecialJerseys';
+// import Footer from '../components/Footer';
+import { Server } from '../S-link';
 
 function SpecificJersey() {
     const { id } = useParams();
@@ -15,37 +16,23 @@ function SpecificJersey() {
     const [size, setSize] = useState('S');
     const [promo, setPromo] = useState('nil');
     const [fullSleeves, setFullSleeves] = useState(false);
-    const [socks, setSocks] = useState(false);
     const [shorts, setShorts] = useState(false);
     const [address, setAddress] = useState('');
-    const [price, setPrice] = useState(800);
+    const [price, setPrice] = useState(799);
     const [totalPrice, setTotalPrice] = useState();
     const [imgs, setImgs] = useState();
 
-    let jersey;
+
+
     let prodId = id-1;
-    // jersey = products1[prodId];
+    const jersey = products1[prodId];
 
-    if(prodId < 22){
-        jersey = products1[prodId];
-        console.log(prodId, jersey);
-    } else{
-        prodId = id - 23;
-        jersey = products2[prodId];
-        console.log(prodId, jersey);
-    }
-
-    useEffect(() => {
-        console.log(jersey);
-    }, [jersey]);
-
-    useEffect(() => {
-        console.log(products2);
-    }, [products2]);
 
     useEffect(() => {
         setImgs(jersey.images);
     }, [jersey.images]);
+
+    const images = jersey.images.map((image) => `${Server}/jerseys/${image}`);
 
 
     const cart = {
@@ -57,18 +44,14 @@ function SpecificJersey() {
         size: size,
         price: price,
         quantity: quantity,
-        imgs,
+        imgs: images,
         address: address,
         fullSleeves,
-        socks,
         shorts,
         promo,
         totalPrice
     }
 
-useEffect(() => {
-    console.log(price);
-}, [price]);
 
     const minus = (e) => {
         e.preventDefault();
@@ -89,19 +72,10 @@ useEffect(() => {
     }
 
 
-    const images = jersey.images.map((image) => `http://localhost:5000/jerseys/${image}`);
 
     const handleFullSleeves = () => {
         setFullSleeves((prevFullSleeves) => !prevFullSleeves);
         if(fullSleeves){
-            setPrice(previousPrice => previousPrice - 50);
-        } else{
-            setPrice(previousPrice => previousPrice + 50);    
-        }
-    }
-    const handleSocks = () => {
-        setSocks((prevSocks) => !prevSocks);
-        if(socks){
             setPrice(previousPrice => previousPrice - 100);
         } else{
             setPrice(previousPrice => previousPrice + 100);    
@@ -110,12 +84,16 @@ useEffect(() => {
     const handleShorts = () => {
         setShorts((prevShorts) => !prevShorts);
         if(shorts){
-            setPrice(previousPrice => previousPrice - 100);
+            setPrice(previousPrice => previousPrice - 150);
         } else{
-            setPrice(previousPrice => previousPrice + 100);    
+            setPrice(previousPrice => previousPrice + 150);    
         }
     }
 
+    const missingInfo = (e) => {
+        e.preventDefault();
+        alert('Please enter all info');
+    }
 
 useEffect(() => {
     setTotalPrice(quantity*price)
@@ -128,7 +106,7 @@ useEffect(() => {
             {/* <!-- Shop Detail Start --> */}
 
 
-            <div className="prod-card" style={{ width: "100%", height:"1200px", color:"#dcdcdc"}}>
+            <div className="prod-card" style={{ width: "100%", color:"#dcdcdc"}}>
                 <div style={{height:"100%", backgroundColor:"#dcdcdc", width:"100%"}} className="container-fluid d-flex align-items-center" >
                         <SimpleCarousel images={images} />
                 </div>
@@ -140,7 +118,7 @@ useEffect(() => {
                     <p className="mb-4">{jersey.description}</p>
                     <div className="mb-3" >
                         <div>
-                            <label htmlFor="size" className="text-light">Choose size:</label>
+                            <label htmlFor="size" className="text-light">Choose size: <a href="/sizechart" target="_blank" className="medium">Refer Size Chart</a></label>
                             <select value={size} required id="cars" style={{ width: "200px" }} className="form-control bg-light text-dark" onChange={e => setSize(e.target.value)}>
                                 <option value="XS">XS</option>
                                 <option value="S">S</option>
@@ -155,17 +133,12 @@ useEffect(() => {
 
                         <div style={{ margin: "5px" }} className="custom-control custom-checkbox custom-control-block">
                             <input onChange={handleFullSleeves} type="checkbox" className="custom-control-input" id="inlineCheckbox1" />
-                            <label className="custom-control-label" htmlFor="inlineCheckbox1">Full Sleeves (+ &#8377;50)</label>
-                        </div>
-                        <div style={{ margin: "5px" }} className="custom-control custom-checkbox custom-control-block">
-                            <input onChange={handleSocks} type="checkbox" className="custom-control-input" id="inlineCheckbox2" />
-                            <label className="custom-control-label" htmlFor="inlineCheckbox2">Socks (+ &#8377;100)</label>
+                            <label className="custom-control-label" htmlFor="inlineCheckbox1">Full Sleeves (+ &#8377;100)</label>
                         </div>
                         <div style={{ margin: "5px" }} className="custom-control custom-checkbox custom-control-block">
                             <input onChange={handleShorts} type="checkbox" className="custom-control-input" id="inlineCheckbox3" />
-                            <label className="custom-control-label" htmlFor="inlineCheckbox3">Shorts (+ &#8377;100)</label>
+                            <label className="custom-control-label" htmlFor="inlineCheckbox3">Shorts (+ &#8377;150)</label>
                         </div>
-
 
                     </div>
                     <div className="d-flex flex-column mb-1 pt-2">
@@ -195,7 +168,7 @@ useEffect(() => {
                         <div className="form-group mb-3">
                             <div>
                                 <label htmlFor="phnum">Phone Number</label>
-                                <input style={{ width: "200px" }} onChange={e => setPhone(e.target.value)} type="number" className="form-control noArrow" placeholder="Enter your Phone Number" />
+                                <input style={{ width: "200px" }} onChange={e => setPhone(e.target.value)} type="text" className="form-control noArrow" placeholder="Enter your Phone Number" />
                             </div>
                         </div>
                         <div className="form-group">
@@ -221,13 +194,17 @@ useEffect(() => {
         <h4 className='d-inline'>Total Price:</h4>
         <h4 style={{fontWeight: '400', color:"#dcdcdc"}} className='d-inline'> &#8377;{quantity*price}</h4>
       </div>
-                    <PayButton cart={cart}/>
+                    {name && phone && address && mssg ? (
+                        <PayButton cart={cart} />
+                    ) : (
+                        <button onClick={missingInfo} type='submit' className="btn btn-primary px-3" style={{ width: "200px", height: "50px" }}><i className="fa fa-shopping-cart mr-1"></i>Checkout</button>
+                    )}
                 </div>
             </div>
             {/* <!-- Shop Detail End --> */}
 
             
-      {/* <!-- Your other content here --> */}
+      {/* <Footer className="mt-9"/> */}
       
         </>
     )

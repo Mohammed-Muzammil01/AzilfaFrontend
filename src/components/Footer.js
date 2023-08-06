@@ -17,7 +17,7 @@ function Footer() {
                                     <a href="/"><i className="fa fa-twitter"></i></a>
                                 </li>
                                 <li className="list-inline-item">
-                                    <a href="/"><i className="fa fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/azilfainc/"><i className="fa fa-instagram"></i></a>
                                 </li>
                                 
                             </ul>
@@ -25,9 +25,9 @@ function Footer() {
                         <div className="col-sm-2">
                             <h5>Legal</h5>
                             <ul className="list-unstyled">
-                                <li><a href="/">Privacy</a></li>
-                                <li><a href="/">Terms</a></li>
-                                <li><a href="/">Refund policy</a></li>
+                                <li><a href="/privacy">Privacy</a></li>
+                                <li><a href="/T&C">Terms</a></li>
+                                <li><a href="/T&C">Refund policy</a></li>
                             </ul>
                         </div>
 

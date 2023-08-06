@@ -1,11 +1,13 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import internationalJerseys from '../data/allJerseys';
-import { Server } from '../S-link';
+import React from 'react'
+import EPLproducts from '../../data/EPLjerseys'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import { Server } from '../../S-link'
 
-function ProductPage() {
-    return (
-        <>
+
+function EPL() {
+  return (
+    <>
 
             {/* nav start */}
 
@@ -18,7 +20,7 @@ function ProductPage() {
                 <div className="row">
 
                     {
-                        internationalJerseys.map((productData) => (
+                        EPLproducts.map((productData) => (
                             <div className="col-md-4 mt-4">
                         <div className="card" style={{height:"600px"}}>
                             <div className="card-body" style={{height:"400px"}}>
@@ -50,9 +52,11 @@ function ProductPage() {
 
                 </div>
             </div>
-        </>
-    )
 
+            <Footer />
+        </>
+
+  )
 }
 
-export default ProductPage
+export default EPL

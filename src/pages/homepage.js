@@ -134,22 +134,22 @@ function Homepage() {
             </section>
 
             {/* <!--pricing section--> */}
-            <section id='sec4' className="py-7 bg-dark section-angle top-right bottom-right price-box">
-                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "400px", minHeight: "400px"}}>
+            <section id='sec4' style={{width:"100%"}} className="py-7 bg-dark section-angle top-right bottom-right price-box">
+                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px", minHeight: "400px"}}>
                     <h3 className="card-title text-primary mb-0 pt-4">Popular Jerseys</h3>
                     <img alt='j1' src={j1} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
-                    <a href="originals" className="btn btn-info" style={{margin:"10px"}}>
+                    <a href="/categories" className="btn btn-info" style={{margin:"10px"}}>
                         Buy now
                     </a>
                 </div>
-                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "400px" }}>
+                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Azilfa Specials</h3>
                     <img alt='j3' src={j3} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
                     <a href="/specials" className="btn btn-info" style={{margin:"10px"}}>
                         Buy now
                     </a>
                 </div>
-                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "400px" }}>
+                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Customisable Jerseys</h3>
                     <img alt='j2' src={j2} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
                     <a href="customise" className="btn btn-info" style={{margin:"10px"}}>
@@ -239,9 +239,9 @@ function Homepage() {
                         <div className="col-sm-2">
                             <h5>Legal</h5>
                             <ul className="list-unstyled">
-                                <li><a href="/">Privacy</a></li>
-                                <li><a href="/">Terms</a></li>
-                                <li><a href="/">Refund policy</a></li>
+                                <li><a href="/privacy">Privacy</a></li>
+                                <li><a href="/T&C">Terms</a></li>
+                                <li><a href="/T&C">Refund policy</a></li>
                             </ul>
                         </div>
 

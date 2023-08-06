@@ -13,7 +13,7 @@ function Navbar() {
                         <button className="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
                             data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                             aria-label="Toggle navigation">
-                            <span data-feather="grid"></span>
+                            <span data-feather="grid"><span style={{color:"#1de9b6"}}>&#9776;</span></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarCollapse">
                             <ul className="navbar-nav ml-auto">

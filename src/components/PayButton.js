@@ -8,34 +8,37 @@ function PayButton(cart) {
   const randomUserId = uuidv4();
 
   const sendData = async () => {
-    console.log(cart);
     const data = new FormData();
 
-    data.set('name', cart.cart.name);
+    data.set('name', cart.cart.name + randomUserId);
     data.set('phnum', cart.cart.phone);
     data.set('size', cart.cart.size);
     data.set('mssg', cart.cart.mssg);
     data.set('quantity', cart.cart.quantity);
     data.set('address', cart.cart.address);
     data.set('fullSleeves', cart.cart.fullSleeves);
-    data.set('socks', cart.cart.socks);
     data.set('shorts', cart.cart.shorts);
     data.set('promo', cart.cart.promo);
+    data.set('prodName', cart.cart.prodName);
 
-    if (!cart.cart.prodId) {
+
       for (let i = 0; i < cart.cart.imgs.length; i++) {
         data.append('imgs', cart.cart.imgs[i]);
       }
-    } else {
-      data.set('imgs', cart.cart.prodId);
-    }
+
+    // if (!cart.cart.prodId) {
+    //   for (let i = 0; i < cart.cart.imgs.length; i++) {
+    //     data.append('imgs', cart.cart.imgs[i]);
+    //   }
+    // } else {
+    //   data.append('imgs', cart.cart.prodId);
+    // }
     try {
-      const response = await axios.post('http://localhost:5000/api/customOrder', data, {
+      const response = await axios.post('https://azilfabackend.onrender.com/api/customOrder', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      console.log(response.data);
     } catch (error) {
       console.error('Error sending form data:', error);
     }
@@ -44,12 +47,12 @@ function PayButton(cart) {
   const handleCheckout = async (e) => {
     e.preventDefault();
     try {
-      await sendData();
-      const res = await axios.post('http://localhost:5000/create-checkout-session', {
+      const res = await axios.post('https://azilfabackend.onrender.com/create-checkout-session', {
         cart,
         userId: randomUserId,
       });
       if (res.data.url) {
+        await sendData();
         window.location.href = res.data.url;
       }
       localStorage.setItem('orderId', randomUserId);
@@ -57,6 +60,7 @@ function PayButton(cart) {
       console.log(error);
     }
   };
+
 
   return (
     <>

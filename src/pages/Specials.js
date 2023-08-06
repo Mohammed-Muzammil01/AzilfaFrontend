@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import products2 from '../data/SpecialJerseys'
+import { Server } from '../S-link'
 
 function Specials() {
     return (
@@ -23,7 +24,7 @@ function Specials() {
                             <div className="card-body" style={{height:"400px"}}>
                                 <div className="card-img-actions" style={{height:"100%"}}>
 
-                                    <img src={`http://localhost:5000/jerseys/${productData.images[0]}`} className="card-img img-fluid" style={{height:"100%"}}  alt="" />
+                                    <img src={`${Server}/jerseys/${productData.images[0]}`} className="card-img img-fluid" style={{height:"100%"}}  alt="" />
 
                                 </div>
                             </div>
