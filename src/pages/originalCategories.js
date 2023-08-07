@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import j1 from '../img/2-1.jpg'
@@ -9,6 +9,13 @@ import { Link } from 'react-router-dom'
 
 
 function OriginalCategories() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        console.log("first");
+      }, []);
+
+
   return (
     <>
 <Navbar/>
