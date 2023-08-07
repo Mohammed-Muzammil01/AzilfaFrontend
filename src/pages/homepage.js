@@ -1,7 +1,7 @@
 import React from 'react'
 import j1 from '../img/j1.webp'
 import j2 from '../img/j2.jpg'
-import j3 from '../img/j3.avif'
+import j3 from '../img/24-1.png'
 import { Link } from 'react-router-dom';
 
 
@@ -142,14 +142,14 @@ function Homepage() {
                         Buy now
                     </Link>
                 </div>
-                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px" }}>
+                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px", height: "480px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Azilfa Specials</h3>
                     <img alt='j3' src={j3} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
                     <Link to="/specials" className="btn btn-info" style={{ margin: "10px" }}>
                         Buy now
                     </Link>
                 </div>
-                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px" }}>
+                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px", height: "480px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Customisable Jerseys</h3>
                     <img alt='j2' src={j2} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
                     <Link to="/customise" className="btn btn-info" style={{ margin: "10px" }}>
