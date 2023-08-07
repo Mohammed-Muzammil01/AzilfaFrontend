@@ -23,7 +23,7 @@ function SpecificJersey() {
     const [fullSleeves, setFullSleeves] = useState(false);
     const [shorts, setShorts] = useState(false);
     const [address, setAddress] = useState('');
-    const [price, setPrice] = useState(899);
+    const [price, setPrice] = useState(799);
     const [totalPrice, setTotalPrice] = useState();
     const [imgs, setImgs] = useState();
 
