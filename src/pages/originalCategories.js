@@ -28,7 +28,7 @@ function OriginalCategories() {
                         Buy now
                     </Link>
                 </div>
-                <div className='card custom-card' style={{ height:"500px", border: "1px solid black", margin: "5px", width: "400px", height: "600px" }}>
+                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "400px", height: "600px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">EPL</h3>
                     <img alt='j2' src={j2} style={{ margin: "5px", height: "60%", maxWidth: "80%", aspectRatio: "3/2" }} />
                     <Link to="/categories/EPL" className="btn btn-info" style={{margin:"10px"}}>
