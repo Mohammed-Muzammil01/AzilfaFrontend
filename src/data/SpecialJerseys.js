@@ -46,7 +46,7 @@ const products2 = [
     id: 30,
     name: "Special Kit 8",
     description: "Special kit for your team.",
-    images: ["30-1.png", "30-2.png", "30-3.png"],
+    images: ["30-1.png", "30-2.png"],
   },
   {
     id: 31,

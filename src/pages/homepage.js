@@ -175,7 +175,7 @@ function Homepage() {
                                     <h6>Can we customise the name and number of the jersey?</h6>
                                     <p className="text-muted">Absolutely! Our services encompass the capability to personalize both the name and number of the jersey.</p>
                                 </div><div className="col-md-6 mb-5">
-                                    <h6>Can we return the product?</h6>
+                                    <h6>Can long does the color and print of the jersey last?</h6>
                                     <p className="text-muted">Regrettably, the option for product return is not withing our current realm of feasability, as our operational framework presently does not encompass the provisions for such returns.</p>
                                 </div>
                                 <div className="col-md-6 mb-5">

@@ -2,6 +2,11 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 
 function TermsNConditions() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
 

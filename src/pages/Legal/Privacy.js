@@ -9,8 +9,8 @@ function Privacy() {
       <strong>Effective Date:</strong> 04 Aug 2023
     </p>
     <p>
-      This Privacy Policy explains how [Your Jersey Store Name] ("we," "us," or "our") collects, uses, and protects the
-      personal information of visitors to our website [www.azilfa.com]. We
+      This Privacy Policy explains how Azilfa collects, uses, and protects the
+      personal information of visitors to our website [www.azilfajerseys.com]. We
       are committed to protecting your privacy and ensuring the security of your personal information. By using our
       Website, you consent to the practices described in this Privacy Policy.
     </p>
