@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import extraProducts from '../../data/Extras'
@@ -6,6 +6,11 @@ import { Server } from '../../S-link'
 import { Link } from 'react-router-dom'
 
 function SpecialJerseys() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
   return (
     <>
 
