@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 
 function CustomPage() {
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     const [name, setName] = useState('');
     const [phone, setPhnum] = useState('');
     const [imgs, setImgs] = useState([]);

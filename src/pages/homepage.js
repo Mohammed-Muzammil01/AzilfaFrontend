@@ -11,7 +11,7 @@ function Homepage() {
             {/* <!--navigation--> */}
 
             <section className="smart-scroll" id='sec1'>
-                <div className="container-fluid" style={{backgroundColor:"#000"}}>
+                <div className="container-fluid" style={{ backgroundColor: "#000" }}>
                     <nav className="navbar navbar-expand-md navbar-dark">
                         <a className="navbar-brand heading-black" href="/" style={{ color: "#fff" }}>
                             AZILFA
@@ -25,7 +25,7 @@ function Homepage() {
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
                                     <a className="nav-link page-scroll" href="#sec4">Shop</a>
-                                </li> 
+                                </li>
                                 <li className="nav-item">
                                     <a className="nav-link page-scroll" href="#features">About</a>
                                 </li>
@@ -33,9 +33,9 @@ function Homepage() {
                                     <a className="nav-link page-scroll" href="#faq">FAQs</a>
                                 </li>
                                 <li className="nav-item">
-                        <a className="nav-link page-scroll" href="#blog">Contact Us</a>
-                    </li>
-                    {/* <li className="nav-item">
+                                    <a className="nav-link page-scroll" href="#blog">Contact Us</a>
+                                </li>
+                                {/* <li className="nav-item">
                         <a className="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="/">
                             <em data-feather="layout" width="18" height="18" className="mr-2"></em>
                             Try Generator
@@ -134,25 +134,25 @@ function Homepage() {
             </section>
 
             {/* <!--pricing section--> */}
-            <section id='sec4' style={{width:"100%"}} className="py-7 bg-dark section-angle top-right bottom-right price-box">
-                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px", minHeight: "400px"}}>
+            <section id='sec4' style={{ width: "100%" }} className="py-7 bg-dark section-angle top-right bottom-right price-box">
+                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px", minHeight: "400px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Popular Jerseys</h3>
                     <img alt='j1' src={j1} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
-                    <Link to="/categories" className="btn btn-info" style={{margin:"10px"}}>
+                    <Link to="/categories" className="btn btn-info" style={{ margin: "10px" }}>
                         Buy now
                     </Link>
                 </div>
                 <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Azilfa Specials</h3>
                     <img alt='j3' src={j3} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
-                    <Link to="/specials" className="btn btn-info" style={{margin:"10px"}}>
+                    <Link to="/specials" className="btn btn-info" style={{ margin: "10px" }}>
                         Buy now
                     </Link>
                 </div>
                 <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Customisable Jerseys</h3>
                     <img alt='j2' src={j2} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
-                    <Link to="/customise" className="btn btn-info" style={{margin:"10px"}}>
+                    <Link to="/customise" className="btn btn-info" style={{ margin: "10px" }}>
                         Buy now
                     </Link>
                 </div>
@@ -171,6 +171,17 @@ function Homepage() {
                     <div className="row mt-5">
                         <div className="col-md-10 mx-auto">
                             <div className="row">
+                                <div className="col-md-6 mb-5">
+                                    <h6>Can we customise the name and number of the jersey?</h6>
+                                    <p className="text-muted">Absolutely! Our services encompass the capability to personalize both the name and number of the jersey.</p>
+                                </div><div className="col-md-6 mb-5">
+                                    <h6>Can we return the product?</h6>
+                                    <p className="text-muted">Regrettably, the option for product return is not withing our current realm of feasability, as our operational framework presently does not encompass the provisions for such returns.</p>
+                                </div>
+                                <div className="col-md-6 mb-5">
+                                    <h6>Can we return the product?</h6>
+                                    <p className="text-muted">The print of the jersey is long lasting and color of the jersey permanent. Our commitment to quality ensures that the print on the fabric is designed to withstand the test of time. Your satisfaction and confidence in our product's durability are of utmost importance to us.</p>
+                                </div>
                                 <div className="col-md-6 mb-5">
                                     <h6>How long does it take to deliver my jersey?</h6>
                                     <p className="text-muted">Delivery times may vary depending on your location and the product availability. Typically, we aim to deliver within 5-7 business days. You will receive a tracking number once your order is shipped.</p>
@@ -191,15 +202,23 @@ function Homepage() {
                                     <h6>What sizes are available for jerseys?</h6>
                                     <p className="text-muted">Our jerseys are available in a range of sizes, from small to extra-large. You can refer to our size chart for accurate measurements to find the perfect fit for you.</p>
                                 </div>
-                                
+                                <div className="col-md-6 mb-5">
+                                    <h6>How can I pay?</h6>
+                                    <p className="text-muted">Payment is due at the time of order placement. We accept payment through secure and reputable payment gateways.</p>
+                                </div>
+                                <div className="col-md-6 mb-5">
+                                    <h6>What materials do you use and what is the quality like?</h6>
+                                    <p className="text-muted">The quality we use is dry fit. Dry fit material is truly exceptional. It keeps you comfortable and cool, even during intense activities. Its moisture-wicking magic ensures you stay dry, making it a perfect choice for any workout or adventure. You'll love how it effortlessly combines style and functionality, making you look and feel fantastic.</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* <!--news section--> */}
-            <section id="blog" className="py-7 bg-dark section-angle top-left bottom-left">
+            < section id="blog" className="py-7 bg-dark section-angle top-left bottom-left" >
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 mx-auto text-center">
@@ -207,17 +226,17 @@ function Homepage() {
                             <p className="text-muted lead">Talk to an Azilfa executive through WhatsApp</p>
                         </div>
                     </div>
-                    
+
                     <div className="row mt-6">
                         <div className="col-md-6 mx-auto text-center">
                             <a href="https://api.whatsapp.com/send?phone=8179010503" className="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* <!--footer--> */}
-            <footer className="py-6">
+            < footer className="py-6" >
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-5 mr-auto">
@@ -233,7 +252,7 @@ function Homepage() {
                                 <li className="list-inline-item">
                                     <a href="https://www.instagram.com/azilfainc/"><i className="fa fa-instagram"></i></a>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div className="col-sm-2">
@@ -258,12 +277,12 @@ function Homepage() {
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer >
 
             {/* <!--scroll to top--> */}
-            <div className="scroll-top">
+            < div className="scroll-top" >
                 <i className="fa fa-angle-up" aria-hidden="true"></i>
-            </div>
+            </div >
 
         </>
     )

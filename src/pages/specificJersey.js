@@ -8,6 +8,11 @@ import Navbar from '../components/Navbar';
 import { Server } from '../S-link';
 
 function SpecificJersey() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     const { id } = useParams();
     const [name, setName] = useState('');
     const [phone, setPhone] = useState();
