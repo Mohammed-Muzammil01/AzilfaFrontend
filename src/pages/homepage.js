@@ -135,7 +135,7 @@ function Homepage() {
 
             {/* <!--pricing section--> */}
             <section id='sec4' style={{ width: "100%" }} className="py-7 bg-dark section-angle top-right bottom-right price-box">
-                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px", minHeight: "400px" }}>
+                <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px", height: "480px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Popular Jerseys</h3>
                     <img alt='j1' src={j1} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
                     <Link to="/categories" className="btn btn-info" style={{ margin: "10px" }}>
