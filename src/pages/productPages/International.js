@@ -41,7 +41,7 @@ function International() {
 
                         <h5 className="mb-0 font-weight-semibold" style={{ color: "#000" }}>&#8377;799.00</h5>
 
-                        <Link to={`/jersey/${productData.id}`} type="button" className="btn bg-dark mt-2"><i className="fa fa-cart-plus mr-2"></i>Buy</Link>
+                        <Link to={`/jersey/${productData.id}`} type="button" className="btn bg-dark mt-2"><i className="fa fa-cart-plus mr-2"></i>Add to cart</Link>
 
                     </div>
                 </div>
