@@ -17,7 +17,6 @@ function SpecificJersey() {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState();
     const [mssg, setMssg] = useState('');
-    const [quantity, setQuantity] = useState(1);
     const [size, setSize] = useState('S');
     const [promo, setPromo] = useState('nil');
     const [fullSleeves, setFullSleeves] = useState(false);
@@ -31,6 +30,7 @@ function SpecificJersey() {
 
     let prodId = id-1;
     const jersey = products1[prodId];
+    const [quantity, setQuantity] = useState(jersey.isSpecial ? 6 : 1);
 
 
     useEffect(() => {
@@ -58,20 +58,33 @@ function SpecificJersey() {
         extraImgs: imgs
     }
 
+    // const minus = (e) => {
+    //     e.preventDefault();
+    //     if(jersey.isSpecial){
+    //         if(quantity === 6){
+    //             setQuantity(6);
+    //         }
+    //     }
+    //     if (quantity === 1) {
+    //         setQuantity(1);
+    //     } else {
+    //         setQuantity(quantity - 1);
+    //     }
+    // }
 
     const minus = (e) => {
         e.preventDefault();
-        if (quantity === 1) {
-            setQuantity(1);
-        } else {
+        if (quantity === 1 || (jersey.isSpecial && quantity === 6)) {
+          setQuantity(quantity);
+        } else{
             setQuantity(quantity - 1);
         }
-    }
+      };
 
     const plus = (e) => {
         e.preventDefault();
-        if (quantity === 11) {
-            setQuantity(11);
+        if (quantity === 15) {
+            setQuantity(15);
         } else {
             setQuantity(quantity + 1);
         }

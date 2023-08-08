@@ -144,7 +144,7 @@ function Homepage() {
                 </div>
                 <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px", height: "480px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Azilfa Specials</h3>
-                    <img alt='j3' src={j3} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
+                    <img alt='j3' src={j3} style={{ margin: "5px", height: "50%", maxWidth: "60%", aspectRatio: "3/2" }} />
                     <Link to="/specials" className="btn btn-info" style={{ margin: "10px" }}>
                         Buy now
                     </Link>

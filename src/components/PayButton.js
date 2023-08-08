@@ -10,7 +10,7 @@ function PayButton(cart) {
   const sendData = async () => {
     const data = new FormData();
 
-    data.set('name', cart.cart.name + randomUserId);
+    data.set('name', cart.cart.name + '' + randomUserId);
     data.set('phnum', cart.cart.phone);
     data.set('size', cart.cart.size);
     data.set('mssg', cart.cart.mssg);

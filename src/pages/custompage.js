@@ -48,17 +48,17 @@ function CustomPage() {
 
     const minus = (e) => {
         e.preventDefault();
-        if (quantity === 1) {
-            setQuantity(1);
-        } else {
+        if (quantity === 1 || (jersey.isSpecial && quantity === 6)) {
+          setQuantity(quantity);
+        } else{
             setQuantity(quantity - 1);
         }
-    }
+      };
 
     const plus = (e) => {
         e.preventDefault();
-        if (quantity === 11) {
-            setQuantity(11);
+        if (quantity === 15) {
+            setQuantity(15);
         } else {
             setQuantity(quantity + 1);
         }
