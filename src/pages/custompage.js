@@ -16,12 +16,12 @@ function CustomPage() {
     const [imgs, setImgs] = useState([]);
     const [mssg, setMssg] = useState('');
     const [size, setSize] = useState('');
-    const [quantity, setQuantity] = useState(1);
+    const [quantity, setQuantity] = useState(6);
     const [address, setAddress] = useState('');
     const [promo, setPromo] = useState('nil');
     const [fullSleeves, setFullSleeves] = useState(false);
     const [shorts, setShorts] = useState(false);
-    const [price, setPrice] = useState(1000);
+    const [price, setPrice] = useState(999);
     const [totalPrice, setTotalPrice] = useState();
 
     const addImgs = (e) => {
@@ -48,8 +48,8 @@ function CustomPage() {
 
     const minus = (e) => {
         e.preventDefault();
-        if (quantity === 1 || (jersey.isSpecial && quantity === 6)) {
-          setQuantity(quantity);
+        if (quantity === 6) {
+          setQuantity(6);
         } else{
             setQuantity(quantity - 1);
         }
