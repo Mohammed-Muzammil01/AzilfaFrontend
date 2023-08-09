@@ -3,6 +3,7 @@ import j1 from '../img/j1.webp'
 import j2 from '../img/j2.jpg'
 import j3 from '../img/24-1.png'
 import { Link } from 'react-router-dom';
+import Logo from '../img/AzilfaLogoPNG2.png'
 
 
 function Homepage() {
@@ -13,8 +14,8 @@ function Homepage() {
             <section className="smart-scroll" id='sec1'>
                 <div className="container-fluid" style={{ backgroundColor: "#000" }}>
                     <nav className="navbar navbar-expand-md navbar-dark">
-                        <a className="navbar-brand heading-black" href="/" style={{ color: "#fff" }}>
-                            AZILFA
+                        <a className="navbar-brand heading-black d-flex justify-content-center align-items-center" href="/" style={{ color: "#fff" }}>
+                            <img style={{width:"40px", height:"40px", marginRight:"5px"}} alt='logo' src={Logo}/>AZILFA
                         </a>
                         <button className="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
                             data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
@@ -137,7 +138,7 @@ function Homepage() {
             <section id='sec4' style={{ width: "100%" }} className="py-7 bg-dark section-angle top-right bottom-right price-box">
                 <div className='card custom-card' style={{ border: "1px solid black", margin: "5px", width: "360px", height: "480px" }}>
                     <h3 className="card-title text-primary mb-0 pt-4">Popular Jerseys</h3>
-                    <img alt='j1' src={j1} style={{ margin: "5px", height: "50%", maxWidth: "80%", aspectRatio: "3/2" }} />
+                    <img alt='j1' src={j1} style={{ margin: "5px", height: "40%", maxWidth: "80%", aspectRatio: "3/2" }} />
                     <Link to="/categories" className="btn btn-info" style={{ margin: "10px" }}>
                         Buy now
                     </Link>
@@ -175,11 +176,11 @@ function Homepage() {
                                     <h6>Can we customise the name and number of the jersey?</h6>
                                     <p className="text-muted">Absolutely! Our services encompass the capability to personalize both the name and number of the jersey.</p>
                                 </div><div className="col-md-6 mb-5">
-                                    <h6>Can long does the color and print of the jersey last?</h6>
+                                    <h6>Can we return the product?</h6>
                                     <p className="text-muted">Regrettably, the option for product return is not withing our current realm of feasability, as our operational framework presently does not encompass the provisions for such returns.</p>
                                 </div>
                                 <div className="col-md-6 mb-5">
-                                    <h6>Can we return the product?</h6>
+                                    <h6>Can long does the color and print of the jersey last?</h6>
                                     <p className="text-muted">The print of the jersey is long lasting and color of the jersey permanent. Our commitment to quality ensures that the print on the fabric is designed to withstand the test of time. Your satisfaction and confidence in our product's durability are of utmost importance to us.</p>
                                 </div>
                                 <div className="col-md-6 mb-5">
@@ -208,7 +209,7 @@ function Homepage() {
                                 </div>
                                 <div className="col-md-6 mb-5">
                                     <h6>What materials do you use and what is the quality like?</h6>
-                                    <p className="text-muted">The quality we use is dry fit. Dry fit material is truly exceptional. It keeps you comfortable and cool, even during intense activities. Its moisture-wicking magic ensures you stay dry, making it a perfect choice for any workout or adventure. You'll love how it effortlessly combines style and functionality, making you look and feel fantastic.</p>
+                                    <p className="text-muted">The material we use is dry fit or matty fabric. Dry fit material is truly exceptional. It keeps you comfortable and cool, even during intense activities. Its moisture-wicking magic ensures you stay dry, making it a perfect choice for any workout or adventure. You'll love how it effortlessly combines style and functionality, making you look and feel fantastic.</p>
                                 </div>
 
                             </div>
