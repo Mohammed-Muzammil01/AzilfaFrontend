@@ -95,7 +95,7 @@ function CustomPage() {
 
             <div className="container" style={{ marginTop: "200px" }}>
                 <div className="row justify-content-center mt-5">
-                    <div className="form-container">
+                    <div className="form-container" style={{padding:"10px"}}>
                         <h3 className="text-center mb-4">Order Customised Jersey</h3>
                         <form>
                             <div className="form-group">
